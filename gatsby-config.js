@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Expecto Frontendum`,
+    author: `Kasia Zadurska`,
+    description: `A blog about all things frontend`,
+    siteUrl: `https://expectofrontendum.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `kzadurska`,
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Expecto Frontendum`,
+        short_name: `Expecto Frontendum`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
