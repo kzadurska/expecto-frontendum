@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "expecto-frontendum",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A blog about all things frontend",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kasia Zadurska <katarzyna.zadurska@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -35,7 +35,7 @@
     "typography": "^0.16.18",
     "typography-theme-wordpress-2016": "^0.16.18"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://expectofrontendum.com",
   "keywords": [
     "gatsby"
   ],
@@ -43,11 +43,12 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/kzadurska/expecto-frontendum.git"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,json,css}}'",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
