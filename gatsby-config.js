@@ -1,12 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Expecto Frontendum`,
-    author: `Kasia Zadurska`,
+    authors: `Kasia Zadurska & Robert Kirsz`,
     description: `A blog about all things frontend`,
     siteUrl: `https://expectofrontendum.com/`,
-    social: {
-      twitter: `kzadurska`,
-    },
   },
   plugins: [
     {
@@ -74,5 +71,15 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `content/`,
+      },
+    },
   ],
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorsJson`,
+  }
 }

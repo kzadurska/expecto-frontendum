@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/Bio"
+import Author, { AuthorFragment } from "../components/Author"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Author author={post.frontmatter.author} />
 
         <ul
           style={{
@@ -70,7 +70,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -80,6 +79,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        author {
+          ...AuthorFragment
+        }
       }
     }
   }
