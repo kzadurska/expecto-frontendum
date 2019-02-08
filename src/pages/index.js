@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/Bio"
+import Author, { AuthorFragment } from "../components/Author"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -11,6 +11,7 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const authors = data.allAuthorsJson.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,7 +19,6 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -37,6 +37,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+        {authors.map(({ node }) => <Author key={node.id} author={node} />)}
       </Layout>
     )
   }
@@ -62,6 +63,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
           }
+        }
+      }
+    }
+    allAuthorsJson {
+      edges {
+        node {
+          ...AuthorFragment
         }
       }
     }
