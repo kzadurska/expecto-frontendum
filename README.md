@@ -1,46 +1,51 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Expecto frontendum blog
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+or what happens when two Potter geeks decide to start a blog about frontend
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Installation
 
-## 🚀 Quick start
+1.  **Clone the repo**
 
-1.  **Create a Gatsby site.**
+2.  **Install dependencies**
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+    Make sure you have `node` and `npm` installed first.
+    Navigate into the cloned directory and install dependencies through npm:
 
     ```sh
-    # create a new Gatsby site using the blog starter
-    npx gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
+    cd expecto-frontendum/
+    npm ci
     ```
 
-1.  **Start developing.**
+3.  **Start developing**
 
-    Navigate into your new site’s directory and start it up.
+    Start the blog locally:
 
     ```sh
-    cd my-blog-starter/
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+4.  **Open the source code and start editing**
 
-    Your site is now running at `http://localhost:8000`!
+    The blog is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool we use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Contribution
 
-## 🧐 What's inside?
+Create a feature branch and open a new pull request to the base branch. Avoid commiting straight to master.
+
+
+## Deployment
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+
+### Continuous integration
+
+_Note: To be done_
+
+## GatsbyJS blog starter
+
+### What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -81,16 +86,13 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+### Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- **For most developers it is recommended to start with an [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+- **To dive straight into code samples, head [to GatsbyJS documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
