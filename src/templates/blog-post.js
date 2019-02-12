@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Div from 'styled-kit/Div'
 
 import Author, { AuthorFragment } from '../components/Author'
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 import { rhythm, scale } from '../utils/typography'
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostPageTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -22,7 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           ...scale(-1 / 5),
           display: 'block',
           marginBottom: rhythm(1),
-          marginTop: rhythm(-1)
+          marginTop: rhythm(-1),
         }}
       >
         {post.frontmatter.date}
@@ -34,36 +35,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <Author author={post.frontmatter.author} />
 
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
+      <Div wraps mTop={40}>
+        {previous && (
+          <Link to={previous.fields.slug} rel="prev">
+            ← {previous.frontmatter.title}
+          </Link>
+        )}
 
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+        {next && (
+          <Link to={next.fields.slug} rel="next" style={{ marginLeft: 'auto' }}>
+            {next.frontmatter.title} →
+          </Link>
+        )}
+      </Div>
     </Layout>
   )
 }
 
-export default BlogPostTemplate
+export default BlogPostPageTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {

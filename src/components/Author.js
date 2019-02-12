@@ -1,31 +1,23 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Div from 'styled-kit/Div'
 
-import { rhythm } from '../utils/typography'
+import Avatar from './Avatar'
 
-const Author = ({ author }) => (
-  <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-    <img
-      src={author.avatar.publicURL}
-      alt={author.name}
-      style={{
-        flex: 'none',
-        marginRight: rhythm(1 / 2),
-        marginBottom: 0,
-        width: 50,
-        height: 50,
-        borderRadius: '50%',
-        objectFit: 'cover'
-      }}
-    />
-    <p>
-      Written by <strong>{author.name}</strong>
-      <br />
-      {author.bio}
-      <br />
+const Author = ({ author, ...props }) => (
+  <Div itemsStart listLeft={16} {...props}>
+    <Avatar src={author.avatar.publicURL} alt={author.name} />
+
+    <Div column listTop={4} itemsStart>
+      <span>
+        Written by <strong>{author.name}</strong>
+      </span>
+
+      <span>{author.bio}</span>
+
       <a href={`https://twitter.com/${author.twitter}`}>Follow {author.name.split(' ')[0]} on Twitter</a>
-    </p>
-  </div>
+    </Div>
+  </Div>
 )
 
 export const query = graphql`

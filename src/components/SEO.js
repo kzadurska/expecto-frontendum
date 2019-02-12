@@ -8,13 +8,13 @@ const propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 }
 
 const defaultProps = {
   lang: 'en',
   meta: [],
-  keywords: []
+  keywords: [],
 }
 
 const SEO = ({ description, lang, meta, keywords, title }) => (
@@ -22,52 +22,53 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
     query={detailsQuery}
     render={data => {
       const metaDescription = description || data.site.siteMetadata.description
+
       return (
         <Helmet
           htmlAttributes={{
-            lang
+            lang,
           }}
           title={title}
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
           meta={[
             {
               name: 'description',
-              content: metaDescription
+              content: metaDescription,
             },
             {
               property: 'og:title',
-              content: title
+              content: title,
             },
             {
               property: 'og:description',
-              content: metaDescription
+              content: metaDescription,
             },
             {
               property: 'og:type',
-              content: 'website'
+              content: 'website',
             },
             {
               name: 'twitter:card',
-              content: 'summary'
+              content: 'summary',
             },
             {
               name: 'twitter:creator',
-              content: data.site.siteMetadata.authors
+              content: data.site.siteMetadata.authors,
             },
             {
               name: 'twitter:title',
-              content: title
+              content: title,
             },
             {
               name: 'twitter:description',
-              content: metaDescription
-            }
+              content: metaDescription,
+            },
           ]
             .concat(
               keywords.length > 0
                 ? {
                     name: 'keywords',
-                    content: keywords.join(', ')
+                    content: keywords.join(', '),
                   }
                 : []
             )
