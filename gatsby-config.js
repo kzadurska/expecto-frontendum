@@ -78,6 +78,7 @@ module.exports = {
         path: 'content/',
       },
     },
+    'gatsby-plugin-styled-components',
   ],
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorsJson',
