@@ -25,6 +25,7 @@
     "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "1.10.0",
     "gatsby": "2.0.111",
     "gatsby-image": "2.0.29",
     "gatsby-plugin-feed": "2.0.13",
@@ -33,6 +34,7 @@
     "gatsby-plugin-offline": "2.0.22",
     "gatsby-plugin-react-helmet": "3.0.6",
     "gatsby-plugin-sharp": "2.0.20",
+    "gatsby-plugin-styled-components": "3.0.5",
     "gatsby-plugin-typography": "2.2.7",
     "gatsby-remark-copy-linked-files": "2.0.9",
     "gatsby-remark-images": "2.0.6",
@@ -48,6 +50,8 @@
     "react-dom": "16.7.0",
     "react-helmet": "5.2.0",
     "react-typography": "0.16.18",
+    "styled-components": "4.1.3",
+    "styled-kit": "0.3.4",
     "typeface-merriweather": "0.0.54",
     "typeface-montserrat": "0.0.54",
     "typography": "0.16.18",
