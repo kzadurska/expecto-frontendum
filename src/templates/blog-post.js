@@ -5,7 +5,6 @@ import Div from 'styled-kit/Div'
 import Author, { AuthorFragment } from '../components/Author'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { rhythm, scale } from '../utils/typography'
 
 const BlogPostPageTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -18,20 +17,11 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
 
       <h1>{post.frontmatter.title}</h1>
 
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: 'block',
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
+      <p>{post.frontmatter.date}</p>
 
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <hr style={{ marginBottom: rhythm(1) }} />
+      <hr />
 
       <Author author={post.frontmatter.author} />
 

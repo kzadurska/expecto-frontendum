@@ -17,10 +17,8 @@ const propTypes = {
 
 const PostExcerpt = ({ post, ...props }) => (
   <div {...props}>
-    <h3 style={{ marginBottom: 16 }}>
-      <Link style={{ boxShadow: 'none' }} to={post.fields.slug}>
-        {post.frontmatter.title}
-      </Link>
+    <h3>
+      <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     </h3>
 
     <small>{post.frontmatter.date}</small>

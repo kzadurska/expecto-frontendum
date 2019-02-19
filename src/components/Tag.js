@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const Label = styled.span`
   color: #333;
-  font: 14px sans-serif;
+  font-size: 14px;
 `
 
 const Count = styled.span`
@@ -18,7 +18,8 @@ const Count = styled.span`
   background: white;
 
   color: #333;
-  font: 10px/12px sans-serif;
+  font-size: 10px;
+  line-height: 12px;
   text-align: center;
 `
 
@@ -31,14 +32,12 @@ const Wrapper = styled(Link)`
   background: #e0e0e0;
   border-radius: 16px;
 
+  text-decoration: none;
   cursor: pointer;
 
   &:hover ${Label} {
     text-decoration: underline;
   }
-
-  /* // TODO: that can probably be removed once we clean-up the typography */
-  box-shadow: none;
 `
 
 const Tag = ({ count, children, ...props }) => (
