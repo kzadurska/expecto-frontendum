@@ -65,12 +65,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
+    // Makes every JSON file found in "content/" be queryable with GraphQL (foo.json => FooJson)
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
@@ -81,6 +76,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
   ],
   mapping: {
+    // Maps blog post's "author" value to an object from "content/authors.json"
     'MarkdownRemark.frontmatter.author': 'AuthorsJson',
   },
 }
