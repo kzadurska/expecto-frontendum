@@ -22,6 +22,7 @@
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "serve": "gatsby serve",
     "lint": "eslint --ext .js --ignore-pattern public . --fix",
+    "lint:ci": "eslint --ext .js --ignore-pattern public .",
     "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'"
   },
   "dependencies": {
