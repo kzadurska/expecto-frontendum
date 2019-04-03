@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Div from 'styled-kit/Div'
 
 const propTypes = {
   post: PropTypes.shape({
@@ -16,15 +17,15 @@ const propTypes = {
 }
 
 const PostExcerpt = ({ post, ...props }) => (
-  <div {...props}>
-    <h3>
+  <Div column {...props}>
+    <h2 css="text-align: center; margin: 0;">
       <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-    </h3>
+    </h2>
 
-    <small>{post.frontmatter.date}</small>
+    <small css="text-align: center;">{post.frontmatter.date}</small>
 
     <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-  </div>
+  </Div>
 )
 
 PostExcerpt.propTypes = propTypes
