@@ -15,7 +15,7 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-      <h2 css="text-align: center; margin: 64px 0 0; color: #005882;">{post.frontmatter.title}</h2>
+      <h2 css="text-align: center; margin: 32px 0 0; color: #005882;">{post.frontmatter.title}</h2>
 
       <small css="text-align: center;">{post.frontmatter.date}</small>
 

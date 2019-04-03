@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={title}>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
 
-      <PostExcerptsList posts={edges} mTop={64} />
+      <PostExcerptsList posts={edges} mTop={32} />
 
       <TagsList mTop={64} />
 
