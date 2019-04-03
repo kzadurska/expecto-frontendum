@@ -5,9 +5,9 @@ import Div from 'styled-kit/Div'
 import Author, { AuthorFragment } from './Author'
 
 const AuthorsList = ({ authors, ...props }) => (
-  <Div wraps listRight={32} listBottom={24} {...props}>
+  <Div wraps justifyAround {...props}>
     {authors.map(author => (
-      <Author key={author.node.id} author={author.node} />
+      <Author key={author.node.id} author={author.node} css="padding: 24px;" />
     ))}
   </Div>
 )
