@@ -38,7 +38,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
     <Layout location={location} title={title}>
       <SEO title={`"${tag}" posts`} keywords={['blog', 'gatsby', 'javascript', 'react']} />
 
-      <h4 css="text-align: center; margin: 24px 0; height: 16px;">
+      <h4 css="text-align: center; margin: 0 0 16px; height: 16px;">
         {`${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`}
       </h4>
 
