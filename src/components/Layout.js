@@ -1,31 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import Div from 'styled-kit/Div'
 
 import GlobalStyle from './GlobalStyle'
 
-const Wrapper = styled.div`
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px 24px;
+const HomeLink = styled(Link)`
+  flex: none;
+
+  display: block;
+  padding: 32px 16px;
+
+  font: 35px/0.6 Cinzel, serif;
+  text-align: center;
+  text-decoration: none;
 `
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const HeadingElement = location.pathname === rootPath ? 'h1' : 'h3'
+const Layout = ({ title, children }) => (
+  <Div column css="min-height: 100vh;">
+    <GlobalStyle />
 
-  return (
-    <Wrapper>
-      <GlobalStyle />
-      <header>
-        <HeadingElement>
-          <Link to="/">{title}</Link>
-        </HeadingElement>
-      </header>
-      <main>{children}</main>
-    </Wrapper>
-  )
-}
+    <HomeLink to="/">{title}</HomeLink>
+
+    <Div as="main" column pBottom={24} flex={1} maxWidth={630} padding="0 16px" margin="0 auto">
+      {children}
+    </Div>
+  </Div>
+)
 
 export default Layout

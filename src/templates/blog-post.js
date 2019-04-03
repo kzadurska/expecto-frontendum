@@ -15,17 +15,15 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-      <h1>{post.frontmatter.title}</h1>
+      <h2 css="text-align: center; margin: 64px 0 0; color: #005882;">{post.frontmatter.title}</h2>
 
-      <p>{post.frontmatter.date}</p>
+      <small css="text-align: center;">{post.frontmatter.date}</small>
 
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div css="margin-top: 40px;" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <hr />
+      <Author css="margin-top: 80px;" author={post.frontmatter.author} />
 
-      <Author author={post.frontmatter.author} />
-
-      <Div wraps mTop={40}>
+      <Div wraps mTop="auto" pTop={80} css="font-size: 14px;">
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
             ← {previous.frontmatter.title}

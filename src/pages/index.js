@@ -3,25 +3,23 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PostExcerpt from '../components/PostExcerpt'
+import PostExcerptsList from '../components/PostExcerptsList'
 import TagsList from '../components/TagsList'
 import AuthorsList from '../components/AuthorsList'
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const { title } = data.site.siteMetadata
+  const { edges } = data.allMarkdownRemark
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
 
-      {posts.map(post => (
-        <PostExcerpt key={post.node.fields.slug} post={post.node} />
-      ))}
+      <PostExcerptsList posts={edges} mTop={64} />
 
-      <TagsList mTop={40} />
+      <TagsList mTop={64} />
 
-      <AuthorsList mTop={40} />
+      <AuthorsList mTop={64} />
     </Layout>
   )
 }

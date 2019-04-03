@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PostExcerpt from '../components/PostExcerpt'
+import PostExcerptsList from '../components/PostExcerptsList'
 
 const propTypes = {
   pageContext: PropTypes.shape({
@@ -38,11 +38,11 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
     <Layout location={location} title={title}>
       <SEO title={`"${tag}" posts`} keywords={['blog', 'gatsby', 'javascript', 'react']} />
 
-      <h4>{`${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`}</h4>
+      <h4 css="text-align: center; margin: 24px 0; height: 16px;">
+        {`${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`}
+      </h4>
 
-      {edges.map(edge => (
-        <PostExcerpt key={edge.node.fields.slug} post={edge.node} />
-      ))}
+      <PostExcerptsList posts={edges} />
     </Layout>
   )
 }
