@@ -4,18 +4,22 @@ import Div from 'styled-kit/Div'
 
 import Avatar from './Avatar'
 
+import twitterLogo from '../../content/assets/twitter-logo.svg'
+
 const Author = ({ author, ...props }) => (
-  <Div itemsStart listLeft={16} {...props}>
+  <Div column itemsCenter listTop={16} {...props}>
     <Avatar src={author.avatar.publicURL} alt={author.name} />
 
-    <Div column listTop={4} itemsStart>
+    <Div column listTop={4} itemsCenter>
       <span>
         Written by <strong>{author.name}</strong>
       </span>
 
       <span>{author.bio}</span>
 
-      <a href={`https://twitter.com/${author.twitter}`}>Follow {author.name.split(' ')[0]} on Twitter</a>
+      <a href={`https://twitter.com/${author.twitter}`} css="display: block;">
+        <img src={twitterLogo} alt="Twitter logo" width="40" />
+      </a>
     </Div>
   </Div>
 )
