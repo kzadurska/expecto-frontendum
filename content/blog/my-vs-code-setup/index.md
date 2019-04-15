@@ -5,8 +5,6 @@ author: kasia-zadurska
 tags: [vscode, setup]
 ---
 
-## My VS Code setup
-
 This is a concise list of my favourite VS Code extensions and settings.
 
 ### Background
