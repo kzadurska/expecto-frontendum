@@ -19,11 +19,12 @@
   "scripts": {
     "start": "gatsby develop",
     "start:clean": "rm -rf public && rm -rf .cache && gatsby develop",
-    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "build": "rm -rf public && rm -rf .cache && gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "lint": "eslint --ext .js --ignore-pattern public . --fix",
     "lint:ci": "eslint --ext .js --ignore-pattern public .",
-    "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'"
+    "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'",
+    "deploy": "npm run build && gh-pages -d public"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
@@ -63,6 +64,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-standard": "4.0.0",
+    "gh-pages": "2.0.1",
     "prettier": "1.16.4"
   }
 }
