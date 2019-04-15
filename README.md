@@ -37,7 +37,13 @@ Create a feature branch and open a new pull request to the base branch. Avoid co
 
 ## Deployment
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+Deploy the blog to github pages:
+
+```sh
+npm run deploy
+```
+
+_Note: Default deploy commit is "Updates". To be changed_
 
 ### Continuous integration
 
