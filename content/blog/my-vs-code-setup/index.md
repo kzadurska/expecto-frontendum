@@ -8,7 +8,7 @@ tags: [vscode, setup]
 This is a concise list of my favourite VS Code extensions and settings.
 
 ### Background
-I am a huge fan of VS code. I previously coded on Sublime Text, then moved to Code after a job change. The transistion has been smooth and I am not looking back!
+I am a huge fan of VS Code. I previously coded on Sublime Text, then moved to Code after a job change. The transition has been smooth and I am not looking back!
 ### Extensions
 #### Syntax highlighting
 
@@ -67,7 +67,7 @@ This one is especially useful to me when familiarizing myself with a new project
 
 #### View all whitespace
 
-There were times when indentation alone was not enough for me to spot an extra white space character. Its use seems obsolete with prettier right now, but I cannot imagine having it any other way.
+There were times when indentation alone was not enough for me to spot an extra white space character. Its use seems obsolete with Prettier right now, but I cannot imagine having it any other way.
 
 ```
 {
