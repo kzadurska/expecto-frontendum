@@ -1,0 +1,8 @@
+language: node_js
+node_js: "11"
+install: npm ci --ignore-scripts # Do not execute any scripts defined in the package.json
+
+jobs:
+  include: 
+    - stage: lint
+      script: npm run lint:ci
