@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PostExcerptsList from '../components/PostExcerptsList'
+import PostsList from '../components/PostsList'
 import TagsList from '../components/TagsList'
 import AuthorsList from '../components/AuthorsList'
 
@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={title}>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
 
-      <PostExcerptsList posts={edges} mTop={32} />
+      <PostsList posts={edges} mTop={32} />
 
       <TagsList mTop={64} />
 
@@ -36,13 +36,13 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            summary
           }
         }
       }

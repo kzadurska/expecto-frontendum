@@ -13,11 +13,13 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.summary} />
 
       <h2 css="text-align: center; margin: 32px 0 0; color: #005882;">{post.frontmatter.title}</h2>
 
       <small css="text-align: center;">{post.frontmatter.date}</small>
+
+      <p css="text-align: center;">{post.frontmatter.summary}</p>
 
       <div css="margin-top: 40px;" dangerouslySetInnerHTML={{ __html: post.html }} />
 
@@ -51,11 +53,11 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        summary
         author {
           ...AuthorFragment
         }

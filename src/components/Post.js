@@ -11,12 +11,13 @@ const propTypes = {
     frontmatter: PropTypes.shape({
       date: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      summary: PropTypes.string,
     }),
   }),
   children: PropTypes.node,
 }
 
-const PostExcerpt = ({ post, ...props }) => (
+const Post = ({ post, ...props }) => (
   <Div column {...props}>
     <h2 css="text-align: center; margin: 0;">
       <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
@@ -24,10 +25,10 @@ const PostExcerpt = ({ post, ...props }) => (
 
     <small css="text-align: center;">{post.frontmatter.date}</small>
 
-    <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+    <p dangerouslySetInnerHTML={{ __html: post.frontmatter.summary }} />
   </Div>
 )
 
-PostExcerpt.propTypes = propTypes
+Post.propTypes = propTypes
 
-export default PostExcerpt
+export default Post

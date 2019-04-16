@@ -2,10 +2,9 @@
 title: My VS Code setup
 date: 2019-04-09
 author: kasia-zadurska
+summary: This is a concise list of my favourite VS Code extensions and settings.
 tags: [vscode, setup]
 ---
-
-This is a concise list of my favourite VS Code extensions and settings.
 
 ### Background
 I am a huge fan of VS Code. I previously coded on Sublime Text, then moved to Code after a job change. The transition has been smooth and I am not looking back!

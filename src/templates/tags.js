@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PostExcerptsList from '../components/PostExcerptsList'
+import PostsList from '../components/PostsList'
 
 const propTypes = {
   pageContext: PropTypes.shape({
@@ -42,7 +42,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
         {`${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`}
       </h4>
 
-      <PostExcerptsList posts={edges} />
+      <PostsList posts={edges} />
     </Layout>
   )
 }
@@ -65,13 +65,13 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            summary
           }
         }
       }
