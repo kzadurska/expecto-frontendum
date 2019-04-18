@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
 import Avatar from './Avatar'
@@ -30,10 +30,12 @@ const propTypes = {
 export default function Author({ author, ...props }) {
   return (
     <Div flex="1 1 320px;" column listTop={24} maxWidth={320} {...props}>
-      <Div itemsCenter>
-        <Avatar src={author.avatar.publicURL} alt={author.name} />
-        <h4 css="margin: 0 0 0 16px;">{author.name}</h4>
-      </Div>
+      <Link to={`/authors/${author.id}`}>
+        <Div itemsCenter>
+          <Avatar src={author.avatar.publicURL} alt={author.name} />
+          <h4 css="margin: 0 0 0 16px;">{author.name}</h4>
+        </Div>
+      </Link>
 
       <span>{author.bio}</span>
 
