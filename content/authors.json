@@ -9,8 +9,9 @@
   {
     "id": "robert-kirsz",
     "name": "Robert Kirsz",
-    "bio": "Robert loves CSS",
+    "bio": "Webmaster, frontend developer, coded first website in 2003, in love with CSS since then",
     "avatar": "assets/robert-profile-pic.jpg",
-    "twitter": "RobertKirsz"
+    "codepen": "robertkirsz",
+    "github": "robertkirsz"
   }
 ]

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import Author, { AuthorFragment } from '../components/Author'
+import Author from '../components/Author'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
@@ -15,29 +15,31 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.frontmatter.summary} />
 
-      <h2 css="text-align: center; margin: 32px 0 0; color: #005882;">{post.frontmatter.title}</h2>
+      <h2 css="margin: 32px 0 0; color: #005882;">{post.frontmatter.title}</h2>
 
-      <small css="text-align: center;">{post.frontmatter.date}</small>
+      <small>{post.frontmatter.date}</small>
 
-      <p css="text-align: center;">{post.frontmatter.summary}</p>
+      <p>{post.frontmatter.summary}</p>
 
       <div css="margin-top: 40px;" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <Author css="margin-top: 80px;" author={post.frontmatter.author} />
+      <Author css="margin: 80px auto auto;" author={post.frontmatter.author} />
 
-      <Div wraps mTop="auto" pTop={80} css="font-size: 14px;">
-        {previous && (
-          <Link to={previous.fields.slug} rel="prev">
-            ← {previous.frontmatter.title}
-          </Link>
-        )}
+      {(previous || next) && (
+        <Div wraps mTop={80} css="font-size: 14px;">
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
 
-        {next && (
-          <Link to={next.fields.slug} rel="next" style={{ marginLeft: 'auto' }}>
-            {next.frontmatter.title} →
-          </Link>
-        )}
-      </Div>
+          {next && (
+            <Link to={next.fields.slug} rel="next" style={{ marginLeft: 'auto' }}>
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </Div>
+      )}
     </Layout>
   )
 }

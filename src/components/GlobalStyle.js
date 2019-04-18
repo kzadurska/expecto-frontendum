@@ -2,8 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font: 16px/1.5 Montserrat, sans-serif;
+    font: 16px/1.5 Merriweather, Georgia, serif;
     margin: 0;
+    box-sizing: border-box;
+  color: #333;
+  }
+
+  *, *::after, *::before {
+    box-sizing: inherit;
   }
 
   h1, h2, h3, h4, h5 {
@@ -31,6 +37,11 @@ const GlobalStyle = createGlobalStyle`
 
     font-style: italic;
     font-weight: 300;
+  }
+
+  .gatsby-highlight {
+    overflow: auto;
+    font-size: 12px;
   }
 `
 
