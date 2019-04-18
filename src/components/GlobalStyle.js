@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font: 16px/1.5 Merriweather, Georgia, serif;
+    font: 14px/1.5 Merriweather, Georgia, serif;
     margin: 0;
     box-sizing: border-box;
-  color: #333;
+    color: #333;
   }
 
   *, *::after, *::before {
