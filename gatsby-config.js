@@ -79,5 +79,4 @@ module.exports = {
     // Maps blog post's "author" value to an object from "content/authors.json"
     'MarkdownRemark.frontmatter.author': 'AuthorsJson',
   },
-  pathPrefix: "/expecto-frontendum", // gh-pages folder
 }
