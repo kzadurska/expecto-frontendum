@@ -4,14 +4,18 @@
     "name": "Kasia Zadurska",
     "bio": "Kasia codes awesome stuff",
     "avatar": "assets/kasia-profile-pic.jpg",
-    "twitter": "kzadurska"
+    "links": {
+      "twitter": "https://twitter.com/kzadurska"
+    }
   },
   {
     "id": "robert-kirsz",
     "name": "Robert Kirsz",
     "bio": "Webmaster, frontend developer, coded first website in 2003, in love with CSS since then",
     "avatar": "assets/robert-profile-pic.jpg",
-    "codepen": "robertkirsz",
-    "github": "robertkirsz"
+    "links": {
+      "codepen": "https://codepen.io/robertkirsz",
+      "github": "https://github.com/robertkirsz"
+    }
   }
 ]

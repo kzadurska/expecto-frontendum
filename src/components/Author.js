@@ -9,6 +9,12 @@ import twitterLogo from '../../content/assets/twitter-logo.svg'
 import codepenLogo from '../../content/assets/codepen-logo.svg'
 import githubLogo from '../../content/assets/github-logo.svg'
 
+const logos = {
+  twitter: <img src={twitterLogo} alt="Twitter logo" width="24" />,
+  codepen: <img src={codepenLogo} alt="Codepen logo" width="24" />,
+  github: <img src={githubLogo} alt="GitHub logo" width="24" />,
+}
+
 const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
@@ -32,23 +38,13 @@ export default function Author({ author, ...props }) {
       <span>{author.bio}</span>
 
       <Div listLeft itemsCenter mLeft={12}>
-        {author.twitter && (
-          <a href={`https://twitter.com/${author.twitter}`} target="_blank">
-            <img src={twitterLogo} alt="Twitter logo" width="24" />
-          </a>
-        )}
-
-        {author.codepen && (
-          <a href={`http://codepen.io/${author.codepen}`} target="_blank">
-            <img src={codepenLogo} alt="Codepen logo" width="24" />
-          </a>
-        )}
-
-        {author.github && (
-          <a href={`https://github.com/${author.github}`} target="_blank">
-            <img src={githubLogo} alt="GitHub logo" width="24" />
-          </a>
-        )}
+        {Object.keys(author.links)
+          .filter(link => author.links[link])
+          .map(link => (
+            <a key={link} href={author.links[link]} target="_blank">
+              {logos[link]}
+            </a>
+          ))}
       </Div>
     </Div>
   )
@@ -64,8 +60,10 @@ export const query = graphql`
     avatar {
       publicURL
     }
-    twitter
-    codepen
-    github
+    links {
+      twitter
+      codepen
+      github
+    }
   }
 `
