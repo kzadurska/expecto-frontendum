@@ -16,20 +16,24 @@ const logos = {
 }
 
 const propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  bio: PropTypes.string,
-  avatar: PropTypes.shape({
-    publicURL: PropTypes.bool.isRequired,
-  }),
-  twitter: PropTypes.string,
-  codepen: PropTypes.string,
-  github: PropTypes.string,
+  author: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    bio: PropTypes.string,
+    avatar: PropTypes.shape({
+      publicURL: PropTypes.string.isRequired,
+    }),
+    links: PropTypes.shape({
+      twitter: PropTypes.string,
+      codepen: PropTypes.string,
+      github: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default function Author({ author, ...props }) {
   return (
-    <Div flex="1 1 320px;" column listTop={24} maxWidth={320} {...props}>
+    <Div column listTop={24} {...props}>
       <Link to={`/authors/${author.id}`}>
         <Div itemsCenter>
           <Avatar src={author.avatar.publicURL} alt={author.name} />

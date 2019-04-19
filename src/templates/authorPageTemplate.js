@@ -9,7 +9,7 @@ import PostsList from '../components/PostsList'
 
 const propTypes = {
   pageContext: PropTypes.shape({
-    author: PropTypes.shape({}).isRequired,
+    author: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -33,24 +33,12 @@ const propTypes = {
   }),
 }
 
-export default function AuthorPageTemplate({ pageContext, data, location }) {
-  const { author } = pageContext
-  const { title } = data.site.siteMetadata
-  const { posts } = data.allMarkdownRemark
-
-  // TODO: I'm fetching all posts and then filtering them by ID here
-  // I'd rather filteri them in GraphQL, but don't know how to do this
-  // Tried something like this, but it doesn't work: `filter: { frontmatter: { author: { id: { eq: "kasia-zadurska" } } } }`
-  // https://www.gatsbyjs.org/docs/graphql-reference/#filter
-  const userPosts = posts.filter(post => post.node.frontmatter.author.id === author.id)
-
+export default function AuthorPageTemplate({ data, location }) {
   return (
-    <Layout location={location} title={title}>
-      <SEO title={author.name} keywords={['blog', 'gatsby', 'javascript', 'react']} />
-
-      <Author author={author} />
-
-      <PostsList posts={userPosts} />
+    <Layout location={location} title={data.site.siteMetadata.title}>
+      <SEO title={data.authorsJson.name} keywords={['blog', 'gatsby', 'javascript', 'react']} />
+      <Author author={data.authorsJson} mTop={32} />
+      <PostsList posts={data.allMarkdownRemark.posts} mTop={40} />
     </Layout>
   )
 }
@@ -58,13 +46,16 @@ export default function AuthorPageTemplate({ pageContext, data, location }) {
 AuthorPageTemplate.propTypes = propTypes
 
 export const pageQuery = graphql`
-  query {
+  query($author: String) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { author: { id: { eq: $author } } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       posts: edges {
         node {
           fields {
@@ -75,11 +66,14 @@ export const pageQuery = graphql`
             title
             summary
             author {
-              id
+              ...AuthorFragment
             }
           }
         }
       }
+    }
+    authorsJson(id: { eq: $author }) {
+      ...AuthorFragment
     }
   }
 `

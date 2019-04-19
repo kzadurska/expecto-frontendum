@@ -14,10 +14,6 @@ const query = `{
         fields {
           slug
         }
-        frontmatter {
-          title
-          tags
-        }
       }
     }
     tags: group(field: frontmatter___tags) {
@@ -28,12 +24,6 @@ const query = `{
     authors: edges {
       node {
         id
-        name
-        bio
-        avatar {
-          publicURL
-        }
-        twitter
       }
     }
   }
@@ -75,7 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `/authors/${author.node.id}/`,
         component: authorPageTemplate,
-        context: { author: author.node },
+        context: { author: author.node.id },
       })
     })
   })
