@@ -10,6 +10,7 @@ module.exports = {
     'arrow-spacing': ['warn', { before: true, after: true }],
     indent: 'off',
     'comma-dangle': 'off',
+    'space-before-function-paren': 'off',
     'standard/object-curly-even-spacing': ['error', 'either'],
     'standard/array-bracket-even-spacing': ['error', 'either'],
     'standard/computed-property-even-spacing': ['error', 'even'],

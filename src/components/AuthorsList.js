@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import Author, { AuthorFragment } from './Author'
+import Author from './Author'
 
 const AuthorsList = ({ authors, ...props }) => (
   <Div wraps justifyAround {...props}>

@@ -14,21 +14,20 @@ const propTypes = {
       summary: PropTypes.string,
     }),
   }),
-  children: PropTypes.node,
 }
 
-const Post = ({ post, ...props }) => (
-  <Div column {...props}>
-    <h2 css="text-align: center; margin: 0;">
-      <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-    </h2>
+export default function Post({ post, ...props }) {
+  return (
+    <Div column {...props}>
+      <h2 css="margin: 0;">
+        <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+      </h2>
 
-    <small css="text-align: center;">{post.frontmatter.date}</small>
+      <small>{post.frontmatter.date}</small>
 
-    <p dangerouslySetInnerHTML={{ __html: post.frontmatter.summary }} />
-  </Div>
-)
+      <p dangerouslySetInnerHTML={{ __html: post.frontmatter.summary }} />
+    </Div>
+  )
+}
 
 Post.propTypes = propTypes
-
-export default Post
