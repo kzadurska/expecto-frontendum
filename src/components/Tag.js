@@ -12,14 +12,14 @@ const Count = styled.span`
   display: inline-block;
   margin-left: 4px;
 
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: white;
 
   color: #333;
   font-size: 10px;
-  line-height: 12px;
+  line-height: 14px;
   text-align: center;
 `
 
@@ -27,16 +27,20 @@ const Wrapper = styled(Link)`
   display: inline-flex;
   align-items: center;
 
-  padding: 6px 12px;
+  padding: 2px 10px;
 
   background: #e0e0e0;
-  border-radius: 16px;
+  border-radius: 10px;
 
   text-decoration: none;
   cursor: pointer;
 
-  &:hover ${Label} {
-    text-decoration: underline;
+  &:hover {
+    background: rgba(0, 88, 130, .3);
+
+    ${Label} {    
+      text-decoration: underline;
+    } 
   }
 `
 
