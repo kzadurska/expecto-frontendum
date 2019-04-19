@@ -47,7 +47,8 @@ _Note: Default deploy commit is "Updates". To be changed_
 
 ### Continuous integration
 
-_Note: To be done_
+#### Travis CI
+[![Build Status](https://travis-ci.org/kzadurska/expecto-frontendum.svg?branch=master)](https://travis-ci.org/kzadurska/expecto-frontendum)
 
 ## GatsbyJS blog starter
 
