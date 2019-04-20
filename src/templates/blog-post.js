@@ -23,7 +23,7 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
 
       <div css="margin-top: 40px;" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <Author css="margin: 80px auto auto;" author={post.frontmatter.author} />
+      <Author css="margin-top: 80px;" author={post.frontmatter.author} />
 
       {(previous || next) && (
         <Div wraps mTop={80} css="font-size: 14px;">

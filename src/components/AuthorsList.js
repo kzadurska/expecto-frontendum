@@ -4,13 +4,15 @@ import Div from 'styled-kit/Div'
 
 import Author from './Author'
 
-const AuthorsList = ({ authors, ...props }) => (
-  <Div wraps justifyAround {...props}>
-    {authors.map(author => (
-      <Author key={author.node.id} author={author.node} css="padding: 24px;" />
-    ))}
-  </Div>
-)
+function AuthorsList({ authors, ...props }) {
+  return (
+    <Div column listTop={40} justifyCenter {...props}>
+      {authors.map(author => (
+        <Author key={author.node.id} author={author.node} maxWidth={320} />
+      ))}
+    </Div>
+  )
+}
 
 const query = graphql`
   query {
