@@ -58,7 +58,7 @@ module.exports = {
         short_name: 'Expecto Frontendum',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#663399',
+        theme_color: '#005882',
         display: 'minimal-ui',
         icon: 'content/assets/gatsby-icon.png',
       },

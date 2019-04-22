@@ -34,10 +34,6 @@ const Wrapper = styled(Link)`
 
   text-decoration: none;
   cursor: pointer;
-
-  &:hover ${Label} {
-    text-decoration: underline;
-  }
 `
 
 const Tag = ({ count, children, ...props }) => (
