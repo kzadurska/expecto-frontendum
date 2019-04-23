@@ -1,7 +1,7 @@
 import React from 'react'
 import Div from 'styled-kit/Div'
 
-import Post from './Post'
+import Post from 'components/Post'
 
 const PostsList = ({ posts, ...props }) => (
   <Div column listTop={32} {...props}>

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import Avatar from './Avatar'
+import twitterLogo from 'content/assets/twitter-logo.svg'
+import codepenLogo from 'content/assets/codepen-logo.svg'
+import githubLogo from 'content/assets/github-logo.svg'
 
-import twitterLogo from '../../content/assets/twitter-logo.svg'
-import codepenLogo from '../../content/assets/codepen-logo.svg'
-import githubLogo from '../../content/assets/github-logo.svg'
+import Avatar from 'components/Avatar'
 
 const logos = {
   twitter: <img src={twitterLogo} alt="Twitter logo" width="24" />,

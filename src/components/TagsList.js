@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import toKebabCase from '../utils/toKebabCase'
+import toKebabCase from 'utils/toKebabCase'
 
-import Tag from './Tag'
+import Tag from 'components/Tag'
 
 const propTypes = {
   tags: PropTypes.arrayOf(

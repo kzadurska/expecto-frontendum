@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import PostsList from '../components/PostsList'
-import TagsList from '../components/TagsList'
-import AuthorsList from '../components/AuthorsList'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
+import PostsList from 'components/PostsList'
+import TagsList from 'components/TagsList'
+import AuthorsList from 'components/AuthorsList'
 
 const BlogIndex = ({ data, location }) => {
   const { title } = data.site.siteMetadata
