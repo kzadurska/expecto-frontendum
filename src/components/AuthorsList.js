@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import Author from './Author'
+import Author from 'components/Author'
 
 function AuthorsList({ authors, ...props }) {
   return (

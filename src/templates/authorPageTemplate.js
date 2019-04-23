@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import Author from '../components/Author'
-import PostsList from '../components/PostsList'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
+import Author from 'components/Author'
+import PostsList from 'components/PostsList'
 
 const propTypes = {
   pageContext: PropTypes.shape({

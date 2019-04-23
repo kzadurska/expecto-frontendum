@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import Author from '../components/Author'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Author from 'components/Author'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
 
 const BlogPostPageTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark

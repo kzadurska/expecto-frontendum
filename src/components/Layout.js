@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Div from 'styled-kit/Div'
 
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from 'components/GlobalStyle'
 
 const HomeLink = styled(Link)`
   flex: none;
