@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
 import toKebabCase from '../utils/toKebabCase'
-import Orb from './Orb'
 
 import Tag from './Tag'
 
@@ -20,11 +19,9 @@ const propTypes = {
 const TagsList = ({ tags, ...props }) => (
   <Div wraps listRight {...props}>
     {tags.map(tag => (
-      <Orb key={tag.fieldValue}>
-        <Tag to={`/tags/${toKebabCase(tag.fieldValue)}/`} count={tag.totalCount}>
-          {tag.fieldValue}
-        </Tag>
-      </Orb>
+      <Tag key={tag.fieldValue} to={`/tags/${toKebabCase(tag.fieldValue)}/`} count={tag.totalCount}>
+        {tag.fieldValue}
+      </Tag>
     ))}
   </Div>
 )

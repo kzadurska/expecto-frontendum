@@ -32,7 +32,7 @@ const propTypes = {
 const Layout = ({ title, children }) => (
   <Div column>
     <GlobalStyle />
-    <HomeLink to="/">{title}</HomeLink>
+    <HomeLink to="/" className="no-orb">{title}</HomeLink>
     <Main>{children}</Main>
   </Div>
 )

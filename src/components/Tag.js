@@ -26,14 +26,11 @@ const Count = styled.span`
 const Wrapper = styled(Link)`
   display: inline-flex;
   align-items: center;
-
+  
   padding: 6px 12px;
-
+  
   background: #e0e0e0;
   border-radius: 16px;
-
-  text-decoration: none;
-  cursor: pointer;
 `
 
 const Tag = ({ count, children, ...props }) => (

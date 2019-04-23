@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
 import Avatar from './Avatar'
-import Orb from './Orb'
 
 import twitterLogo from '../../content/assets/twitter-logo.svg'
 import codepenLogo from '../../content/assets/codepen-logo.svg'
@@ -34,15 +33,11 @@ const propTypes = {
 
 export default function Author({ author, ...props }) {
   return (
-    <Div column listTop={24} {...props}>
-      <Link to={`/authors/${author.id}`} css="text-decoration: none;">
+    <Div column itemsStart listTop={24} {...props}>
+      <Link className="no-orb" to={`/authors/${author.id}`}>
         <Div itemsCenter>
-          <Orb>
-            <Avatar src={author.avatar.publicURL} alt={author.name} />
-          </Orb>
-          <Orb>
-            <h4 css="margin: 0 0 0 16px;">{author.name}</h4>
-          </Orb>
+          <Avatar src={author.avatar.publicURL} alt={author.name} />
+          <h4 css="margin: 0 0 0 16px;">{author.name}</h4>
         </Div>
       </Link>
 
@@ -52,11 +47,9 @@ export default function Author({ author, ...props }) {
         {Object.keys(author.links)
           .filter(link => author.links[link])
           .map(link => (
-            <Orb key={link}>
-              <a href={author.links[link]} target="_blank">
-                {logos[link]}
-              </a>
-            </Orb>
+            <a key={link} href={author.links[link]} target="_blank">
+              {logos[link]}
+            </a>
           ))}
       </Div>
     </Div>
