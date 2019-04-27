@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
+import { mainColor } from 'utils/constants'
+
 import Author from 'components/Author'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
@@ -15,7 +17,14 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.frontmatter.summary} />
 
-      <h2 css="margin: 32px 0 0; color: #005882;">{post.frontmatter.title}</h2>
+      <h2
+        css={`
+          margin: 32px 0 0;
+          color: ${mainColor};
+        `}
+      >
+        {post.frontmatter.title}
+      </h2>
 
       <small>{post.frontmatter.date}</small>
 

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { mainColor } from 'utils/constants'
+
 const GlobalStyle = createGlobalStyle`
   body {
     font: 14px/1.5 Merriweather, Georgia, serif;
@@ -23,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #005882;
+    color: ${mainColor};
 
     &:hover {
       text-decoration: none;
