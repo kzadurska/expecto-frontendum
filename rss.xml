@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Expecto Frontendum]]></title><description><![CDATA[A blog about all things frontend]]></description><link>https://expectofrontendum.com/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 20 Apr 2019 14:36:54 GMT</lastBuildDate><item><title><![CDATA[My VS Code setup]]></title><description><![CDATA[Background I am a huge fan of VS Code. I previously coded on Sublime Text, then moved to Code after a job change. The transition has been…]]></description><link>https://expectofrontendum.com//my-vs-code-setup/</link><guid isPermaLink="false">https://expectofrontendum.com//my-vs-code-setup/</guid><pubDate>Tue, 09 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Background&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Expecto Frontendum]]></title><description><![CDATA[A blog about all things frontend]]></description><link>https://expectofrontendum.com/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 27 Apr 2019 16:29:10 GMT</lastBuildDate><item><title><![CDATA[My VS Code setup]]></title><description><![CDATA[Background I am a huge fan of VS Code. I previously coded on Sublime Text, then moved to Code after a job change. The transition has been…]]></description><link>https://expectofrontendum.com//my-vs-code-setup/</link><guid isPermaLink="false">https://expectofrontendum.com//my-vs-code-setup/</guid><pubDate>Tue, 09 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Background&lt;/h3&gt;
 &lt;p&gt;I am a huge fan of VS Code. I previously coded on Sublime Text, then moved to Code after a job change. The transition has been smooth and I am not looking back!&lt;/p&gt;
 &lt;h3&gt;Extensions&lt;/h3&gt;
 &lt;h4&gt;Syntax highlighting&lt;/h4&gt;
@@ -35,24 +35,24 @@ Syntax highlighting and IntelliSense for styled-components.&lt;/p&gt;
 &lt;h3&gt;Settings&lt;/h3&gt;
 &lt;h4&gt;View the whole path of the current file&lt;/h4&gt;
 &lt;p&gt;This one is especially useful to me when familiarizing myself with a new project. At that moment I don’t know my way around it just yet and the path helps me navigate.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-    &amp;quot;window.title&amp;quot;: &amp;quot;${activeEditorLong}${separator}${rootName}&amp;quot;,
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;window.title&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${activeEditorLong}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${separator}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${rootName}&lt;/span&gt;&quot;&lt;/span&gt;,
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;View all whitespace&lt;/h4&gt;
 &lt;p&gt;There were times when indentation alone was not enough for me to spot an extra white space character. Its use seems obsolete with Prettier right now, but I cannot imagine having it any other way.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-    &amp;quot;editor.renderWhitespace&amp;quot;: &amp;quot;all&amp;quot;,&amp;quot;files.insertFinalNewline&amp;quot;: true,
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;editor.renderWhitespace&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;all&quot;&lt;/span&gt;,&lt;span class=&quot;token string&quot;&gt;&quot;files.insertFinalNewline&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; true,
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;Quick-open to edit files&lt;/h4&gt;
 &lt;p&gt;Open the file in a new tab with quick-open (e.g. &lt;code class=&quot;language-text&quot;&gt;cmd + p&lt;/code&gt;) instead of viewing it with &lt;a href=&quot;https://code.visualstudio.com/docs/getstarted/userinterface#_preview-mode&quot;&gt;preview mode&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-    &amp;quot;workbench.editor.enablePreviewFromQuickOpen&amp;quot;: false,
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;workbench.editor.enablePreviewFromQuickOpen&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; false,
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;Format files&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;Format on save&lt;/em&gt; is a life saver. One of my favourite options, here together with the project’s &lt;code class=&quot;language-text&quot;&gt;prettier&lt;/code&gt; config. Trimming trailing whitespace on save and adding that last empty line is a cherry on top.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-    &amp;quot;prettier.requireConfig&amp;quot;: true,
-    &amp;quot;editor.formatOnSave&amp;quot;: true,
-    &amp;quot;trailing-spaces.trimOnSave&amp;quot;: true,
-    &amp;quot;files.insertFinalNewline&amp;quot;: true,
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;prettier.requireConfig&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; true,
+    &lt;span class=&quot;token string&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; true,
+    &lt;span class=&quot;token string&quot;&gt;&quot;trailing-spaces.trimOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; true,
+    &lt;span class=&quot;token string&quot;&gt;&quot;files.insertFinalNewline&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; true,
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
