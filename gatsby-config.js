@@ -1,3 +1,5 @@
+const { mainColor } = require('./src/utils/constants')
+
 module.exports = {
   siteMetadata: {
     title: 'Expecto Frontendum',
@@ -111,7 +113,7 @@ module.exports = {
         short_name: 'Expecto Frontendum',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#663399',
+        theme_color: mainColor,
         display: 'minimal-ui',
         icon: 'content/assets/gatsby-icon.png',
       },
