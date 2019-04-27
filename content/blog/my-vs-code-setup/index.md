@@ -58,7 +58,7 @@ Recommended by a colleague. So convenient, because of its live reload.
 
 This one is especially useful to me when familiarizing myself with a new project. At that moment I don't know my way around it just yet and the path helps me navigate.
 
-```
+```bash
 {
     "window.title": "${activeEditorLong}${separator}${rootName}",
 }
@@ -68,7 +68,7 @@ This one is especially useful to me when familiarizing myself with a new project
 
 There were times when indentation alone was not enough for me to spot an extra white space character. Its use seems obsolete with Prettier right now, but I cannot imagine having it any other way.
 
-```
+```bash
 {
     "editor.renderWhitespace": "all","files.insertFinalNewline": true,
 }
@@ -78,7 +78,7 @@ There were times when indentation alone was not enough for me to spot an extra w
 #### Quick-open to edit files
 
 Open the file in a new tab with quick-open (e.g. `cmd + p`) instead of viewing it with [preview mode](https://code.visualstudio.com/docs/getstarted/userinterface#_preview-mode).
-```
+```bash
 {
     "workbench.editor.enablePreviewFromQuickOpen": false,
 }
@@ -88,7 +88,7 @@ Open the file in a new tab with quick-open (e.g. `cmd + p`) instead of viewing i
 
 _Format on save_ is a life saver. One of my favourite options, here together with the project's `prettier` config. Trimming trailing whitespace on save and adding that last empty line is a cherry on top.
 
-```
+```bash
 {
     "prettier.requireConfig": true,
     "editor.formatOnSave": true,
