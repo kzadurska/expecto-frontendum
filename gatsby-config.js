@@ -3,7 +3,7 @@ const { mainColor } = require('./src/utils/constants')
 module.exports = {
   siteMetadata: {
     title: 'Expecto Frontendum',
-    authors: 'Kasia Zadurska & Robert Kirsz',
+    authors: 'Kasia Zadurska',
     description: 'A blog about all things frontend',
     siteUrl: 'https://expectofrontendum.com/',
   },

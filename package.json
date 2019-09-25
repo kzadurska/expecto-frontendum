@@ -3,10 +3,7 @@
   "private": true,
   "description": "A blog about all things frontend",
   "version": "0.1.0",
-  "contributors": [
-    "Kasia Zadurska <kzadurska@gmail.com> (https://expectofrontendum.com)",
-    "Robert Kirsz <robert.kirsz@gmail.com> (https://robertkirsz.com)"
-  ],
+  "author": "Kasia Zadurska <kzadurska@gmail.com> (https://expectofrontendum.com)",
   "homepage": "https://expectofrontendum.com",
   "repository": {
     "type": "git",
