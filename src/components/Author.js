@@ -11,7 +11,6 @@ import Avatar from 'components/Avatar'
 
 const logos = {
   twitter: <img src={twitterLogo} alt="Twitter logo" width="24" />,
-  codepen: <img src={codepenLogo} alt="Codepen logo" width="24" />,
   github: <img src={githubLogo} alt="GitHub logo" width="24" />,
 }
 
@@ -68,7 +67,6 @@ export const query = graphql`
     }
     links {
       twitter
-      codepen
       github
     }
   }
