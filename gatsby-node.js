@@ -14,6 +14,9 @@ const query = `{
         fields {
           slug
         }
+        frontmatter {
+          title
+        }
       }
     }
     tags: group(field: frontmatter___tags) {
