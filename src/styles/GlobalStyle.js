@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 import { mainColorDark, textColorLight, mainColorLight, backgroundColorLight, textColorDark, backgroundColorDark, quoteColorLight, quoteColorDark } from '../utils/constants'
+import { darkMode } from './DarkMode'
+
+import { lightMode } from './LightMode'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -70,6 +73,8 @@ const GlobalStyle = createGlobalStyle`
     blockquote {
       border-left: 5px solid ${quoteColorDark};
     }
+
+    ${darkMode}
   }
 
   @media (prefers-color-scheme: light) {
@@ -86,6 +91,8 @@ const GlobalStyle = createGlobalStyle`
     blockquote {
       border-left: 5px solid ${quoteColorLight};
     }
+
+    ${lightMode}
   }
 `
 
