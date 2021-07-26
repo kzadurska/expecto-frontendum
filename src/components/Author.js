@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Div from 'styled-kit/Div'
 
 import twitterLogo from 'content/assets/twitter-logo.svg'
-import codepenLogo from 'content/assets/codepen-logo.svg'
 import githubLogo from 'content/assets/github-logo.svg'
 
 import Avatar from 'components/Avatar'

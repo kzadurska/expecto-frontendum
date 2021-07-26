@@ -30,7 +30,7 @@ const BlogPostPageTemplate = ({ data, pageContext, location }) => {
 
       <p>{post.frontmatter.summary}</p>
 
-      <div css="margin-top: 40px;" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div css="margin-top: 16px;" dangerouslySetInnerHTML={{ __html: post.html }} />
 
       {(previous || next) && (
         <Div wraps mTop={80} css="font-size: 14px;">
