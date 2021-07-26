@@ -3,11 +3,19 @@ import { createGlobalStyle } from 'styled-components'
 import { mainColor } from 'utils/constants'
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%
+  }
+
   body {
-    font: 14px/1.5 Merriweather, Georgia, serif;
+    font-family: Merriweather, Georgia, serif;
     margin: 0;
     box-sizing: border-box;
     color: #333;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 15%;
+    word-spacing: 20%;
   }
 
   *, *::after, *::before {
