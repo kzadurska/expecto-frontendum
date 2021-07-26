@@ -27,30 +27,38 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3235d76dfc90c307e87f.js"
+    "url": "webpack-runtime-78f603430ebb0c95c749.js"
   },
   {
     "url": "framework-05df00a99aba3b65940a.js"
   },
   {
-    "url": "styles.3da05674fbf0faf10d9f.css"
+    "url": "styles.bf7421f052a707ecf7f3.css"
   },
   {
-    "url": "app-7105bee25cd089e79c9d.js"
+    "url": "app-4922ebbf352b798480b3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1bd331163c243901fab16d00b779e97d"
+    "revision": "6160899f90f18832b21d05f7f806a62c"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-323e0a7b58ff2d234ecd.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "a9204f8e0a6c53b6a45501fcced8b942"
   },
   {
     "url": "polyfill-12e451f6342a34533bd5.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "a18302abd66cd598fb6f522be82de35a"
+    "revision": "61b5977a3d3a7045fa89ef9168dee02f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -137,12 +145,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/expecto-frontendum`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-7105bee25cd089e79c9d.js`))) {
+  if (!resources || !(await caches.match(`/expecto-frontendum/app-4922ebbf352b798480b3.js`))) {
     return await fetch(event.request)
   }
 
@@ -155,7 +163,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/expecto-frontendum/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
