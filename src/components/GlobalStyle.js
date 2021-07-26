@@ -1,8 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { mainColor } from 'utils/constants'
+import { mainColorDark, textColorLight, mainColorLight, backgroundColorLight, textColorDark, backgroundColorDark } from '../utils/constants'
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    color-scheme: light dark;
+  }
+
   html {
     font-size: 62.5%
   }
@@ -11,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: Merriweather, Georgia, serif;
     margin: 0;
     box-sizing: border-box;
-    color: #333;
     font-size: 1.6rem;
     line-height: 150%;
     letter-spacing: 15%;
@@ -33,8 +36,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${mainColor};
-
     &:hover {
       text-decoration: none;
     }
@@ -52,6 +53,32 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-highlight {
     overflow: auto;
     font-size: 12px;
+  }
+
+  /* ---------- light mode dark mode ---------- */
+
+  @media (prefers-color-scheme: dark) {
+    /* Dark theme styles go here */
+    body {
+      color: ${textColorDark};
+      background-color: ${backgroundColorDark};
+    }
+
+    a {
+      color: ${mainColorDark};
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    /* Light theme styles go here */
+    body {
+      color: ${textColorLight};
+      background-color: ${backgroundColorLight};
+    }
+
+    a {
+      color: ${mainColorLight};
+    }
   }
 `
 
