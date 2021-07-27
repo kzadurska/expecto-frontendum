@@ -16,8 +16,8 @@
   "scripts": {
     "start": "gatsby develop",
     "start:clean": "rm -rf public && rm -rf .cache && gatsby develop",
-    "build": "rm -rf public && rm -rf .cache && gatsby build",
-    "serve": "gatsby serve",
+    "build": "rm -rf public && rm -rf .cache && gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
     "lint": "eslint --ext .js --ignore-pattern public . --fix",
     "lint:ci": "eslint --ext .js --ignore-pattern public .",
     "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'",

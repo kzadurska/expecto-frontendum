@@ -1,6 +1,7 @@
 const { mainColor } = require('./src/utils/constants')
 
 module.exports = {
+  pathPrefix: '/expecto-frontendum',
   siteMetadata: {
     title: 'Expecto Frontendum',
     authors: 'Kasia Zadurska',
@@ -53,7 +54,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
