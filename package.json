@@ -21,7 +21,11 @@
     "lint": "eslint --ext .js --ignore-pattern public . --fix",
     "lint:ci": "eslint --ext .js --ignore-pattern public .",
     "format": "prettier --write '{gatsby-*.js,{src,content}/**/*.{js}}'",
-    "deploy": "npm run build && gh-pages -d public"
+    "deploy": "npm run build && gh-pages -d public",
+    "test": "npx playwright test",
+    "test:browser": "npx playwright test --headed --project=webkit",
+    "test:report": "npx playwright show-report",
+    "test:gen": "npx playwright codegen https://kzadurska.github.io/expecto-frontendum/"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.13.2",
@@ -53,6 +57,7 @@
     "typeface-merriweather": "1.1.13"
   },
   "devDependencies": {
+    "@playwright/test": "^1.25.2",
     "babel-eslint": "10.1.0",
     "eslint": "7.31.0",
     "eslint-config-standard": "16.0.3",

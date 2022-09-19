@@ -9,6 +9,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'arrow-spacing': ['warn', { before: true, after: true }],
     indent: 'off',
+    semi: 'off'
     'comma-dangle': 'off',
     'space-before-function-paren': 'off',
     'standard/object-curly-even-spacing': ['error', 'either'],
